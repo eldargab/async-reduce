@@ -1,0 +1,24 @@
+{
+  "name": "async-reduce",
+  "version": "0.0.0",
+  "descirption": "function for async reductions on arrays with concurrency support as well",
+  "keywords": [
+    "reduce",
+    "async",
+    "array",
+    "parallel"
+  ],
+  "author": "Eldar Gabdullin <eldargab@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eldargab/async-reduce"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "license": "MIT"
+}
