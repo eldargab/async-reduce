@@ -30,14 +30,14 @@ reduce([1, 2, 3], 1, sum, function(err, result) {
 })
 ```
 
-During such reduction the given array is splitted into several
-chunks with total chunks number equal to concurrency level (it is
+During such reduction the given array is split into several
+chunks with the total number of chunks equal to the concurrency level (it is
 the first arg to `.concurrent()`).
-That chunks are reduced in parallel. That means that we need a
-`combine` function to assembel results from that independent reductions
+Those chunks are reduced in parallel. That means that we need a
+`combine` function to assemble the results from those independent reductions
 (third arg). We also need some sort of `unit` value to seed our
 reductions (second arg). But we can omit `unit` and `combine`
-if we only interested in side effects:
+if we are only interested in side effects:
 
 ```javascript
 var reduce = require('async-reduce').concurrent(5)
@@ -53,7 +53,7 @@ reduce([1, 2, 3], null, function(_, item, cb) {
 })
 ```
 
-This lib takes care about sync callback calls. They do not cause stack overflows.
+This lib takes care of sync callback calls. They do not cause stack overflows.
 
 ##Installation
 
